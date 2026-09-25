@@ -1,0 +1,9 @@
+name: TLAG-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - setuptools
+  - pip:
+    - git+https://github.com/Jordi-aguilar/TLAGToolkit@peak_area

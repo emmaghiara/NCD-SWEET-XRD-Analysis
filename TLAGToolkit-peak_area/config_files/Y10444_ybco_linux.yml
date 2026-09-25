@@ -1,0 +1,42 @@
+###################
+##    SAMPLE     ##
+###################
+
+sample:
+    scan_folder: Y10444
+    scan_id: 001
+    facility: ALBA
+    period: March
+
+############################
+##    PEAK INFORMATION    ##
+############################
+
+peaks:
+    peak_name: ybco
+    index_start: 1890
+    index_end: 4500
+    step: 5
+    models:
+      - prefix: ybco005
+        model_type: VoigtModel
+        2thlimits: 
+            min: 16.5
+            max: 16.6
+            
+      - prefix: dome
+        model_type: VoigtModel
+        2thlimits: 
+            min: 12.5
+            max: 12.6
+
+
+##################
+## FOLDER PATHS ##
+##################
+
+paths:
+    ALBA:
+        path_integrations: /home/jalarruy/Documents/ICMAB/ALBA/Beamtime {period}/DATA/PROCESSED/{scan_folder}/{scan_id}/
+        filepath_logs: /home/jalarruy/Documents/ICMAB/ALBA/Beamtime {period}/DATA/PROCESSED/logs/{scan_folder}/log_{scan_folder}_{scan_id}.log
+        save_path: /home/jalarruy/Documents/ICMAB/ALBA/Beamtime {period}/DATA/PROCESSED/fitted_peaks/{scan_folder}/
