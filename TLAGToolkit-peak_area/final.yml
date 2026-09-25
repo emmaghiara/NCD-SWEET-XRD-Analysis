@@ -1,0 +1,44 @@
+###################
+##    SAMPLE     ##
+###################
+
+sample:
+    scan_folder: Y12095
+    scan_id: 7
+    facility: ALBA
+    period: Mar24
+    save_data_baseline_subtraction: True
+
+############################S
+##    PEAK INFORMATION    ##
+############################
+
+xrd:
+    xrd_name: final
+    index_start: 
+    index_end: 
+    step: 1
+    baseline: spline_50_2_lam10
+    peaks:
+
+      - peak: REBCO(005)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 16.6
+            max: 17.4
+
+      - peak: dome
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 12
+            max: 13.2
+
+##################
+## FOLDER PATHS ##
+##################
+
+paths:
+    ALBA:
+        path_integrations: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\{scan_id}\
+        filepath_logs: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\logs\log_{scan_folder}_{scan_id}.log
+        save_path: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\

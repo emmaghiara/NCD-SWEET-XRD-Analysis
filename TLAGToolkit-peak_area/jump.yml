@@ -1,0 +1,81 @@
+###################
+##    SAMPLE     ##
+###################
+
+sample:
+    scan_folder: Y12095
+    scan_id: 5
+    facility: ALBA
+    period: Mar24
+    save_data_baseline_subtraction: True
+
+############################S
+##    PEAK INFORMATION    ##
+############################
+
+xrd:
+    xrd_name: jump
+    index_start: 
+    index_end: 
+    step: 1
+    baseline: spline_50_2_lam10
+    peaks:
+
+      - peak: dome
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 12
+            max: 13.2
+            
+      - peak: BaCO3 ortho
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 10.3
+            max: 11.3
+      
+      - peak: BaCO3 hex(104)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 11.4
+            max: 11.7
+
+      - peak: CuO(11-1)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 15.5
+            max: 15.85
+
+      - peak: Cu2O(111)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 15.97
+            max: 16.23
+
+      - peak: BaCu2O2(121)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 15.7
+            max: 15.97
+
+      - peak: REBCO(005)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 16.4
+            max: 17.3
+
+      - peak: REBCO(103)(110)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 14.1
+            max: 14.4
+
+
+##################
+## FOLDER PATHS ##
+##################
+
+paths:
+    ALBA:
+        path_integrations: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\{scan_id}\
+        filepath_logs: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\logs\log_{scan_folder}_{scan_id}.log
+        save_path: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\

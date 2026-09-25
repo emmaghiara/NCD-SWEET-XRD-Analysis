@@ -1,0 +1,135 @@
+###################
+##    SAMPLE     ##
+###################
+
+sample:
+    scan_folder: Y12095
+    scan_id: 4
+    facility: ALBA
+    period: Mar24
+    save_data_baseline_subtraction: True
+
+############################S
+##    PEAK INFORMATION    ##
+############################
+
+xrd:
+    xrd_name: heating
+    index_start: 
+    index_end: 
+    step: 1
+    baseline: spline_50_2_lam10
+    peaks:
+
+      # - peak: REBCO(002)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 6.6
+      #       max: 6.8
+
+      # - peak: REBCO(003)+STO(100)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 9.9
+      #       max: 10.2
+
+      - peak: dome
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 12
+            max: 13.2
+            
+      - peak: BaCO3 ortho
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 10.3
+            max: 11.3
+
+      - peak: CuO(11-1)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 15.5
+            max: 15.85
+
+      - peak: Cu2O(111)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 15.97
+            max: 16.23
+
+      - peak: BaCu2O2(121)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 15.65
+            max: 15.97
+
+      - peak: REBCO(005)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 16.4
+            max: 17.3
+
+      - peak: REBCO(103)(110)
+        model_type: GaussianModel # VoigtModel, GaussianModel
+        2thlimits:
+            min: 14.1
+            max: 14.4
+
+      # - peak: BaCO3 mono
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 11.8
+      #       max: 12.0
+
+      # - peak: Y2Cu2O5(211)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 13.9
+      #       max: 14.0
+
+      # - peak: RE2O3(400)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 14.5
+      #       max: 14.8
+
+      # - peak: REBCO(006)+STO(200)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 9.9
+      #       max: 10.2
+
+      # - peak: BaCu3O4
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 14.0
+      #       max: 14.5
+      
+      # - peak: CuO(111)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 16.88
+      #       max: 17.00
+
+    #   - peak: Y2Cu2O5(204)
+    #     model_type: GaussianModel # VoigtModel, GaussianModel
+    #     2thlimits:
+    #         min: 13.95
+    #         max: 14.45
+
+      # - peak: Cu(111)
+      #   model_type: GaussianModel # VoigtModel, GaussianModel
+      #   2thlimits:
+      #       min: 18.7
+      #       max: 18.9
+
+
+##################
+## FOLDER PATHS ##
+##################
+
+paths:
+    ALBA:
+        path_integrations: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\{scan_id}\
+        filepath_logs: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\logs\log_{scan_folder}_{scan_id}.log
+        save_path: C:\Users\eghiara\Desktop\ALBA\NCD_{period}\DATA\PROCESSED\YBCO\4mbar\{scan_folder}\
